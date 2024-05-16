@@ -18,7 +18,7 @@
 			<man-common-title title="日常推荐">
 				<template #custom>
 					<view class="date">
-						<uni-icons type="calendar" size="18" color="#28b389"></uni-icons>
+						<uni-icons type="calendar" size="18"></uni-icons>
 						<uni-dateformat :date="Date.now()" format="dd号"></uni-dateformat>
 					</view>
 				</template>
@@ -107,9 +107,14 @@
 			
 		}
 	}
-	
+
 	.date {
-		color: #28b389;
+		color: $brand-theme-color;
+		:deep() {
+			.uni-icons {
+				color: $brand-theme-color !important;
+			}
+		}
 	}
 	.more {
 		font-size: 24rpx;

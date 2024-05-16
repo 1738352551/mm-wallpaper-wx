@@ -1,7 +1,7 @@
 <template>
 	<view class="notice">
 		<view class="left">
-			<uni-icons type="sound-filled" size="20" color="#27A1AA"></uni-icons>
+			<uni-icons type="sound-filled" size="20"></uni-icons>
 			<text class="text">公告</text>
 		</view>
 		<view class="center">
@@ -37,16 +37,21 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			:deep() {
+				.uni-icons {
+					color: $brand-theme-color !important;
+				}
+			}
 			.text {
 				font-size: 28rpx;
-				color: #27A1AA;
+				color: $brand-theme-color;
 				font-weight: 600;
 			}
 		}
 		
 		.center {
 			flex: 1;
-			color: #727272;
+			color: $text-font-color-2;
 			swiper {
 				height: 100%;
 				&-item {

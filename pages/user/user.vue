@@ -12,7 +12,7 @@
 			<view class="list">
 				<view class="row">
 					<view class="left">
-						<uni-icons type="download-filled" size="20" color="#28b389"></uni-icons>
+						<uni-icons type="download-filled" size="20"></uni-icons>
 						<view class="text">
 							我的下载
 						</view>
@@ -21,13 +21,13 @@
 						<view class="text">
 							33
 						</view>
-						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
+						<uni-icons type="right" size="15"></uni-icons>
 					</view>
 				</view>
 				
 				<view class="row">
 					<view class="left">
-						<uni-icons type="download-filled" size="20" color="#28b389"></uni-icons>
+						<uni-icons type="download-filled" size="20" ></uni-icons>
 						<view class="text">
 							我的评分
 						</view>
@@ -36,20 +36,20 @@
 						<view class="text">
 							0
 						</view>
-						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
+						<uni-icons type="right" size="15"></uni-icons>
 					</view>
 				</view>
 				
 				<view class="row">
 					<view class="left">
-						<uni-icons type="download-filled" size="20" color="#28b389"></uni-icons>
+						<uni-icons type="download-filled" size="20"></uni-icons>
 						<view class="text">
 							联系客服
 						</view>
 					</view>
 					<view class="right">
 						<view class="text"></view>
-						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
+						<uni-icons type="right" size="15"></uni-icons>
 					</view>
 					<!-- #ifdef MP -->
 					<button open-type="contact"></button>
@@ -65,7 +65,7 @@
 			<view class="list">
 				<view class="row" v-for="item in 2">
 					<view class="left">
-						<uni-icons type="download-filled" size="20" color="#28b389"></uni-icons>
+						<uni-icons type="download-filled" size="20"></uni-icons>
 						<view class="text">
 							我的下载
 						</view>
@@ -74,7 +74,7 @@
 						<view class="text">
 							33
 						</view>
-						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
+						<uni-icons type="right" size="15"></uni-icons>
 					</view>
 				</view>
 			</view>
@@ -139,6 +139,11 @@
 				.left {
 					display: flex;
 					align-items: center;
+					:deep() {
+						.uni-icons {
+							color: $brand-theme-color !important;
+						}
+					}
 					.text {
 						padding-left: 20rpx;
 						color: #666;
@@ -147,6 +152,11 @@
 				.right {
 					display: flex;
 					align-items: center;
+					:deep() {
+						.uni-icons {
+							color: #aaa !important;
+						}
+					}
 					.text {
 						color: #aaa;
 						font-size: 28rpx;
