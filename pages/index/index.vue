@@ -1,5 +1,5 @@
 <template>
-	<view class="homeLayout">
+	<view class="homeLayout pageBG">
 		<view class="banner">
 			<swiper circular indicator-dots 
 			indicator-color="rgba(255, 255, 255,.5)"

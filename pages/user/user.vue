@@ -1,5 +1,5 @@
 <template>
-	<view class="userLayout">
+	<view class="userLayout pageBG">
 		<view class="userInfo">
 			<view class="avatar">
 				<image src="../../static/images/xxmLogo.png" mode="aspectFill"></image>
@@ -10,7 +10,7 @@
 		
 		<view class="section">
 			<view class="list">
-				<view class="row" v-for="item in 3">
+				<view class="row">
 					<view class="left">
 						<uni-icons type="download-filled" size="20" color="#28b389"></uni-icons>
 						<view class="text">
@@ -23,6 +23,40 @@
 						</view>
 						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
 					</view>
+				</view>
+				
+				<view class="row">
+					<view class="left">
+						<uni-icons type="download-filled" size="20" color="#28b389"></uni-icons>
+						<view class="text">
+							我的评分
+						</view>
+					</view>
+					<view class="right">
+						<view class="text">
+							0
+						</view>
+						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
+					</view>
+				</view>
+				
+				<view class="row">
+					<view class="left">
+						<uni-icons type="download-filled" size="20" color="#28b389"></uni-icons>
+						<view class="text">
+							联系客服
+						</view>
+					</view>
+					<view class="right">
+						<view class="text"></view>
+						<uni-icons type="right" size="15" color="#aaa"></uni-icons>
+					</view>
+					<!-- #ifdef MP -->
+					<button open-type="contact"></button>
+					<!-- #endif -->
+					<!-- #ifndef MP -->
+					<button ></button>
+					<!-- #endif -->
 				</view>
 			</view>
 		</view>
@@ -97,6 +131,8 @@
 				padding: 0 30rpx;
 				height: 100rpx;
 				border-bottom: 1px solid #eee;
+				background: #fff;
+				position: relative;
 				&:last-child {
 					border-bottom: 0;
 				}
@@ -115,6 +151,13 @@
 						color: #aaa;
 						font-size: 28rpx;
 					}
+				}
+				button {
+					opacity: 0.1;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					left: 0;
 				}
 			}
 		}
